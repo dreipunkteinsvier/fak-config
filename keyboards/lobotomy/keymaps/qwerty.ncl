@@ -55,10 +55,10 @@ let thumb = fun thumb_idx =>
     key_interrupts = std.array.replicate key_count { decision = 'hold, trigger_on = 'release },
   } in
   [
-    kc.QUOT & lt 1 & hold.reg.behavior thumb_behavior, # thumb 0
-    kc.SPC  & lt 2 & hold.reg.behavior thumb_behavior, # thumb 1
-    kc.BSPC & lt 3 & hold.reg.behavior thumb_behavior, # thumb 2
-    kc.ENT  & lt 4 & hold.reg.behavior thumb_behavior, # thumb 3
+    kc.TAB & lt 1 & hold.reg.behavior thumb_behavior, # thumb 0
+    kc.ENT & lt 2 & hold.reg.behavior thumb_behavior, # thumb 1
+    kc.SPC & lt 3 & hold.reg.behavior thumb_behavior, # thumb 2
+    kc.BSPC & lt 4 & hold.reg.behavior thumb_behavior, # thumb 3
   ]
   |> std.array.at thumb_idx # pick out the appropriate entry from the above list
 in
